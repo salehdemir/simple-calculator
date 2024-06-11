@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstNum"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:hint="First Number"
+        android:paddingStart="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext"
+        android:elevation="8dp"
+        
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/secondNum"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext"
+        android:elevation="8dp"
+        android:hint="Second Number"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNum" />
+
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/secondNum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBtn"
+            android:layout_height="32dp"
+            android:layout_width="64dp"
+            android:background="@drawable/button"
+            android:text="@string/plus"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_row="0"
+            android:layout_column="0"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minusBtn"
+            android:layout_height="32dp"
+            android:layout_width="64dp"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="32dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiplyBtn"
+            android:layout_height="32dp"
+            android:layout_width="64dp"
+            android:background="@drawable/button"
+            android:text="@string/multiply"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divideBtn"
+            android:layout_height="32dp"
+            android:layout_width="64dp"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+
+            android:background="@drawable/button"
+            android:text="@string/divide"
+            android:textColor="@color/white"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginStart="32dp"
+            />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvResult"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout"
+        android:layout_marginStart="32dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
